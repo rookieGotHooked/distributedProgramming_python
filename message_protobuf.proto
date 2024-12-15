@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service MyService {
+  rpc MyMethod(MyRequest) returns (MyResponse) {};
+}
+
+message MyRequest {
+  bytes context = 1;
+  repeated int32 array = 2;
+}
+
+message MyResponse {
+  string result = 1;
+}
